@@ -1,0 +1,29 @@
+﻿<div class="container">
+    <div ng-controller="EventController">
+        <div class="navbar brand">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <img ng-src="{{event.img}}"/>
+        </div>
+        <div class="row">
+            <h3>{{event.name}}</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                {{event.time}}                
+            </div>
+            <div class="col-md-6">
+                <ul>
+                    <li ng-repeat="item in event.items">
+                        {{item.name}} - {{item.count}} <span ng-click="changeCount(item, 1)">+</span> <span ng-click="changeCount(item, -1)">-</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
